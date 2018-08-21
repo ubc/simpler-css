@@ -194,10 +194,8 @@ class Improved_Simpler_CSS {
 	
 	function make_url_agnostic($url){
 		
-		if(substr($url, 5) == 'https')
-			return substr($url, 6);
-		else
-			return substr($url, 5); // assuming the url starts with http
+		$pattern = "/^https?:/i";
+		return trim( preg_replace( $pattern, "", $url ) );
 	}
 
 	
