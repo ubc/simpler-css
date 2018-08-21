@@ -194,7 +194,7 @@ class Improved_Simpler_CSS {
 	
 	function make_url_agnostic($url){
 		
-		$pattern = "/^https?:/";
+		$pattern = "/^https?:/i";
 		return trim( preg_replace( $pattern, "", $url ) );
 	}
 
